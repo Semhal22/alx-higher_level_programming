@@ -2,15 +2,15 @@
 if __name__ == "__main__":
     import sys
     argv = sys.argv
-    len = len(argv) - 1
-    if len == 0:
+    length = len(argv) - 1
+    if length == 0:
         print("0 arguments.")
-    elif len == 1:
+    elif length == 1:
         print("1 argument:")
         print("1: {}".format(argv[1]))
     else:
-        print("{:d} arguments:".format(len))
+        print("{:d} arguments:".format(length))
         i = 1
-        while i <= len:
+        while i <= length:
             print("{:d}: {}".format(i, argv[i]))
             i += 1
