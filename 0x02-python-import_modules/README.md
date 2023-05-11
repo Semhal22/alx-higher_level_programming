@@ -4,4 +4,5 @@
 <ol>
 </li>0. Import a simple function from a simple file</li>
 <li>1. My first toolbox!</li>
+<li>2. How to make a script dynamic!</li>
 </ol>
