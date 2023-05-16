@@ -11,4 +11,5 @@
 <li>6. Lists of lists = Matrix</li>
 <li>7. Tuples addition</li>
 <li>8. Return a tuple with length of a string and its first character</li>
+<li>9. Find the max</li>
 </ol>
