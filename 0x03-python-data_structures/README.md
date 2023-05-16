@@ -7,4 +7,5 @@
 <li>2. Replace element</li>
 <li>3. Print a list of integers... in reverse!</li>
 <li>4. Replace in a copy</li>
+<li>5. Removes all characters c and C from a string</li>
 </ol>
