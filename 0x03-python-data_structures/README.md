@@ -13,4 +13,5 @@
 <li>8. Return a tuple with length of a string and its first character</li>
 <li>9. Find the max</li>
 <li>10. Finds all multiples of 2 in a list</li>
+<li>11. Delete at specific position from list</li>
 </ol>
