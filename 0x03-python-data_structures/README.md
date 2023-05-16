@@ -9,4 +9,5 @@
 <li>4. Replace in a copy</li>
 <li>5. Removes all characters c and C from a string</li>
 <li>6. Lists of lists = Matrix</li>
+<li>7. Tuples addition</li>
 </ol>
