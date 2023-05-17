@@ -4,4 +4,5 @@
 <ol>
 <li>0. Squared simple</li>
 <li>1. Search and replace</li>
+<li>2. Unique addition</li>
 </ol>
