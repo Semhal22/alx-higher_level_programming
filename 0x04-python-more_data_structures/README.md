@@ -6,4 +6,5 @@
 <li>1. Search and replace</li>
 <li>2. Unique addition</li>
 <li>3. Present in both</li>
+<li>4. Only differents</li>
 </ol>
