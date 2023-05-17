@@ -9,4 +9,5 @@
 <li>4. Only differents</li>
 <li>5. Number of keys</li>
 <li>6. Print sorted dictionary</li>
+<li>7. Update dictionary</li>
 </ol>
