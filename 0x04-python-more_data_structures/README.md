@@ -8,4 +8,5 @@
 <li>3. Present in both</li>
 <li>4. Only differents</li>
 <li>5. Number of keys</li>
+<li>6. Print sorted dictionary</li>
 </ol>
