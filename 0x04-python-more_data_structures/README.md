@@ -10,4 +10,5 @@
 <li>5. Number of keys</li>
 <li>6. Print sorted dictionary</li>
 <li>7. Update dictionary</li>
+<li>8. Simple delete by key</li>
 </ol>
