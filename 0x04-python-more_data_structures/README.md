@@ -13,4 +13,5 @@
 <li>8. Simple delete by key</li>
 <li>9. Multiply values of dicitonary by 2</li>
 <li>10. Best score</li>
+<li>11. Multiply by using map</li>
 </ol>
