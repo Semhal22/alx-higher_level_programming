@@ -12,4 +12,5 @@
 <li>7. Update dictionary</li>
 <li>8. Simple delete by key</li>
 <li>9. Multiply values of dicitonary by 2</li>
+<li>10. Best score</li>
 </ol>
