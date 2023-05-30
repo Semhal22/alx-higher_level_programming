@@ -10,4 +10,5 @@
 <li>5. Raise exception</li>
 <li>6. Raise a message</li>
 <li>7. Safe integer print with error message</li>
+<li>8. Safe function</li>
 </ul>
