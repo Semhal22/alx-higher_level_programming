@@ -4,4 +4,5 @@
 <ul>
 <li>0. Safe list printing</li>
 <li>1. Safe printing of an integers list</li>
+<li>2. Print and count integers</li>
 </ul>
