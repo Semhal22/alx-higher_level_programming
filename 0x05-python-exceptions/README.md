@@ -8,4 +8,5 @@
 <li>3. Integers division with debug</li>
 <li>4. Divide a list</li>
 <li>5. Raise exception</li>
+<li>6. Raise a message</li>
 </ul>
