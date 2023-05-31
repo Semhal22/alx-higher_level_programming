@@ -4,4 +4,5 @@
 <ul>
 <li>0. My first square</li>
 <li>1. Square with size<li>
+<li>2. Size validation</li>
 </ul>
