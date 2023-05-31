@@ -5,4 +5,5 @@
 <li>0. My first square</li>
 <li>1. Square with size<li>
 <li>2. Size validation</li>
+<li>3. Area of a square</li>
 </ul>
