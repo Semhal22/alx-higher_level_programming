@@ -7,4 +7,5 @@
 <li>2. Size validation</li>
 <li>3. Area of a square</li>
 <li>4. Access and update private attribute</li>
+<li>5. Printing a square</li>
 </ul>
