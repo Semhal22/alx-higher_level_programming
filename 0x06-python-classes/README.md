@@ -6,4 +6,5 @@
 <li>1. Square with size<li>
 <li>2. Size validation</li>
 <li>3. Area of a square</li>
+<li>4. Access and update private attribute</li>
 </ul>
