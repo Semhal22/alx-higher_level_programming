@@ -8,4 +8,5 @@
 <li>3. Area of a square</li>
 <li>4. Access and update private attribute</li>
 <li>5. Printing a square</li>
+<li>6. Coordinates of a square</li>
 </ul>
