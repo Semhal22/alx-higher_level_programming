@@ -5,4 +5,5 @@
 <li>1. Real definition of a rectangle</li>
 <li>2. Area and Perimeter<li>
 <li>3. String representation</li>
+<li>4. Eval is magic</li>
 </ul>
