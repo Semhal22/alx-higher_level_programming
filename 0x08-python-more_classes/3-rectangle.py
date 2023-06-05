@@ -82,7 +82,7 @@ class Rectangle:
         """Returns the rectangle to be printed with character #
         Returns: or empty string if height or width is 0
         """
-        if self.check_zero is True:
+        if self.check_zero() is True:
             return ""
         rows = ["#" * self.width for _ in range(self.height)]
         return "\n".join(rows)
