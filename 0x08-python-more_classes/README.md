@@ -6,4 +6,5 @@
 <li>2. Area and Perimeter<li>
 <li>3. String representation</li>
 <li>4. Eval is magic</li>
+<li>5. Detect instance deletion</li>
 </ul>
