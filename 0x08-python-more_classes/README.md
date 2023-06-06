@@ -10,4 +10,5 @@
 <li>6. How many instances</li>
 <li>7. Change representation</li>
 <li>8. Compare rectangles</li>
+<li>9. A square is a rectangle</li>
 </ul>
