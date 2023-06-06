@@ -8,4 +8,5 @@
 <li>4. Eval is magic</li>
 <li>5. Detect instance deletion</li>
 <li>6. How many instances</li>
+<li>7. Change representation</li>
 </ul>
