@@ -11,4 +11,5 @@
 <li>7. Change representation</li>
 <li>8. Compare rectangles</li>
 <li>9. A square is a rectangle</li>
+<li>10. N queens</li>
 </ul>
