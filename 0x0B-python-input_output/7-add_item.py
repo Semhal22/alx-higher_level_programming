@@ -12,7 +12,6 @@ filename = "add_item.json"
 try:
     content = load_from_json_file(filename)
     content += arguments
-except Exception as e:
-    if e.__class__.__name__ == "FileNotFoundError":
-        content = []
+except FileNotFoundError:
+    content = []
 save_to_json_file(content, filename)
