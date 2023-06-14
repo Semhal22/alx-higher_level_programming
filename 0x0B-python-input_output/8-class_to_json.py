@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Module contains one function class_to_json"""
 
 
