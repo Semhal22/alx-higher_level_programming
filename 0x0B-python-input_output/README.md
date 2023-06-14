@@ -12,4 +12,5 @@
 <li>8. Class to JSON</li>
 <li>9. Student to JSON</li>
 <li>10. Student to JSON with filter</li>
+<li>11. Student to disk and reload<li>
 </ul>
