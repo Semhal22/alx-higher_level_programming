@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """"Module contains a class named Base"""
+import json
 
 
 class Base:
@@ -19,3 +20,16 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Returns the JSON string representation of argument
+        Args:
+            dict: list_dictionaries
+        Returns:
+            str: json representation
+        """
+        if not list_dictionaries:
+            return "[]"
+        json_repr = json.dumps(list_dictionaries)
+        return json_repr
