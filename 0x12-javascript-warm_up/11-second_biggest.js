@@ -1,24 +1,28 @@
 #!/usr/bin/node
 const { argv } = require('process');
-const lenArr = argv.length;
+const input = argv.slice(2);
+const lenArr = input.length;
 
-if (lenArr === 2 || lenArr === 3) {
+if (lenArr === 0 || lenArr === 1) {
   console.log(0);
 } else {
-  let max = findMax(argv, lenArr);
-  const newArr = argv;
-  const index = newArr.indexOf(max);
+  let max = findMax(input, lenArr);
+  let newArr = argv;
+  // const index = newArr.indexOf(max);
 
-  newArr.splice(index, 1);
+  // newArr.splice(index, 1);
+  newArr = input.filter((arg) => {
+    return arg !== max;
+  });
   max = findMax(newArr, newArr.length);
   console.log(max);
 }
 
 function findMax (arr, len) {
-  let max = arr[2];
-  for (let i = 3; i < len; i++) {
-    if (argv[i] > max) {
-      max = argv[i];
+  let max = arr[0];
+  for (let i = 1; i < len; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
     }
   }
   return max;
