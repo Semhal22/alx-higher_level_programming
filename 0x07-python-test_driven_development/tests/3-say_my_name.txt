@@ -1,0 +1,33 @@
+Test for the module add
+=====================================
+Testing the documentation
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+>>> module_doc = __import__("3-say_my_name").__doc__
+>>> len(module_doc) > 0
+True
+>>> func_doc = say_my_name.__doc__
+>>> len(func_doc) > 0
+True
+
+=====================================
+Testing with different values passed to the say_my_name function
+>>> say_my_name("Semhal", "Desta")
+My name is Semhal Desta
+>>> say_my_name("Semhal")
+My name is Semhal 
+
+>>> say_my_name("Semhal", 14)
+Traceback (most recent call last):
+  ...
+TypeError: last_name must be a string
+
+>>> say_my_name(13.4, "Desta")
+Traceback (most recent call last):
+  ...
+TypeError: first_name must be a string
+
+>>> say_my_name()
+Traceback (most recent call last):
+  ...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
