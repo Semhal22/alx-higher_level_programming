@@ -1,0 +1,40 @@
+Test for the module text_indentation
+=====================================
+Testing the documentation
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+>>> module_doc = __import__("5-text_indentation").__doc__
+>>> len(module_doc) > 0
+True
+>>> func_doc = text_indentation.__doc__
+>>> len(func_doc) > 0
+True
+
+=====================================
+Testing with different values passed to the text indentation function
+>>> text_indentation()
+Traceback (most recent call last):
+	...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation("")
+>>> text_indentation(None)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+>>> text_indentation(13)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+>>> text_indentation(float('inf'))
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+>>> text_indentation("This is a test: to check if text indentation function work. Does it really work? We will see in a moment.")
+This is a test:
+<BLANKLINE>
+to check if text indentation function work.
+<BLANKLINE>
+Does it really work?
+<BLANKLINE>
+We will see in a moment.
+<BLANKLINE>
