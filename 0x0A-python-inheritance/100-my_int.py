@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Inherits from int and modifies some methods"""
 
 
