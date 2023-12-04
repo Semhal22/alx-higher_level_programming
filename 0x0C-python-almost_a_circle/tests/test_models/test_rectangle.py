@@ -5,6 +5,7 @@ from models.rectangle import Rectangle
 from models import rectangle
 from models.base import Base
 import unittest
+from unittest.mock import patch, call
 
 
 class TestBase(unittest.TestCase):
@@ -61,3 +62,19 @@ class TestBase(unittest.TestCase):
 
         r2 = Rectangle(8, 7, 0, 0, 12)
         self.assertEqual(r2.area(), 56)
+
+    @patch('builtins.print')
+    def test_display(self, mock_print):
+        """Test the display method that prints the rectangle using #"""
+        r1 = Rectangle(1, 2)
+        r1.display()
+
+        mock_print.assert_has_calls([call("#", end=""), call(),
+                                    call("#", end="")])
+
+    def test_str(self):
+        """Tests how the class is printed"""
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        r1_str = str(r1)
+
+        self.assertEqual(r1_str, "[Rectangle] (12) 2/1 - 4/6")
