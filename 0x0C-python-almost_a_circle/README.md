@@ -7,3 +7,9 @@
 
 ### 2. First Rectangle
 - Write the class Rectangle that inherits from Base
+
+### 3. Validate attributes
+- Update the class Rectangle by adding validation of all setter methods and instantiation
+
+### 4. Area first
+- Update the class Rectangle by adding the public method def area(self): that returns the area value of the Rectangle instance.

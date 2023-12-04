@@ -53,3 +53,11 @@ class TestBase(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             Rectangle(10, 2, 3, -1)
+
+    def test_area(self):
+        """Test the method area"""
+        r1 = Rectangle(3, 2)
+        self.assertEqual(r1.area(), 6)
+
+        r2 = Rectangle(8, 7, 0, 0, 12)
+        self.assertEqual(r2.area(), 56)
