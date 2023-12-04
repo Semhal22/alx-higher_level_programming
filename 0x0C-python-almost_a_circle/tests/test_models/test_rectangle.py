@@ -21,8 +21,7 @@ class TestBase(unittest.TestCase):
         """Documentation of the function init"""
         self.assertGreater(len(Rectangle.__init__.__doc__), 1)
 
-    @classmethod
-    def setUpClass(cls):
+    def setUp(self):
         Base._Base__nb_objects = 0
 
     def test_values(self):
@@ -38,3 +37,19 @@ class TestBase(unittest.TestCase):
 
         r4 = Rectangle(2, 3)
         self.assertEqual(r4.id, 3)
+
+    def test_types(self):
+        """Check the validation of all the parameters"""
+        with self.assertRaises(TypeError):
+            Rectangle(10, "2")
+
+        with self.assertRaises(ValueError):
+            r = Rectangle(10, 2)
+            r.width = -10
+
+        with self.assertRaises(TypeError):
+            r = Rectangle(10, 2)
+            r.x = {}
+
+        with self.assertRaises(ValueError):
+            Rectangle(10, 2, 3, -1)
