@@ -4,3 +4,6 @@
 
 ### 1. Base class
 - Write the first class Base. This class will be the “base” of all other classes in this project. The goal of it is to manage id attribute in all your future classes and to avoid duplicating the same code (by extension, same bugs)
+
+### 2. First Rectangle
+- Write the class Rectangle that inherits from Base
