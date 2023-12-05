@@ -72,9 +72,32 @@ class TestBase(unittest.TestCase):
         mock_print.assert_has_calls([call("#", end=""), call(),
                                     call("#", end="")])
 
+        # r2 = Rectangle(1, 2, 0, 2)
+        # mock_print.assert_has_calls([call(), call(), call("#", end=""),
+        # call(), call("#", end="")])
+
     def test_str(self):
         """Tests how the class is printed"""
         r1 = Rectangle(4, 6, 2, 1, 12)
         r1_str = str(r1)
 
         self.assertEqual(r1_str, "[Rectangle] (12) 2/1 - 4/6")
+
+    def test_update(self):
+        """Tests if the object is really updated"""
+        r1 = Rectangle(10, 10, 10, 10)
+        r1_str = str(r1)
+
+        self.assertEqual(r1_str, "[Rectangle] (1) 10/10 - 10/10")
+
+        r1.update(89)
+        self.assertEqual(str(r1), "[Rectangle] (89) 10/10 - 10/10")
+
+        r1.update(89, 2)
+        self.assertEqual(str(r1), "[Rectangle] (89) 10/10 - 2/10")
+
+        r1.update(89, 2, 3)
+        self.assertEqual(str(r1), "[Rectangle] (89) 10/10 - 2/3")
+
+        r1.update(89, 2, 3, 4, 5)
+        self.assertEqual(str(r1), "[Rectangle] (89) 4/5 - 2/3")
