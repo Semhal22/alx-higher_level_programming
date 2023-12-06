@@ -44,6 +44,24 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(10, "2")
 
+        with self.assertRaises(TypeError):
+            Rectangle("10", 2)
+
+        with self.assertRaises(TypeError):
+            Rectangle(1, 2, 3, "4")
+
+        with self.assertRaises(ValueError):
+            Rectangle(-1, 2)
+
+        with self.assertRaises(ValueError):
+            Rectangle(1, -2)
+
+        with self.assertRaises(ValueError):
+            Rectangle(0, 2)
+
+        with self.assertRaises(ValueError):
+            Rectangle(2, 0)
+
         with self.assertRaises(ValueError):
             r = Rectangle(10, 2)
             r.width = -10
@@ -51,6 +69,9 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(TypeError):
             r = Rectangle(10, 2)
             r.x = {}
+
+        with self.assertRaises(ValueError):
+            Rectangle(2, 1, 4, -4)
 
         with self.assertRaises(ValueError):
             Rectangle(10, 2, 3, -1)
