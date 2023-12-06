@@ -154,10 +154,25 @@ class TestBase(unittest.TestCase):
         """Tests the method to_json_string of the Base class static method"""
         r1 = Rectangle(10, 7, 2, 8)
         dictionary = r1.to_dictionary()
-        json_dictionary = Base.to_json_string([dictionary])
+        json_dictionary = Rectangle.to_json_string([dictionary])
 
         self.assertEqual(dictionary, {'x': 2, 'width': 10, 'id': 1,
                                       'height': 7, 'y': 8})
         self.assertIsInstance(dictionary, dict)
         self.assertEqual(dictionary, json.loads(json_dictionary)[0])
         self.assertIsInstance(json_dictionary, str)
+
+    def test_save_to_file(self):
+        """Tests class method of Base save_to_file"""
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        Rectangle.save_to_file([r1, r2])
+
+        with open("Rectangle.json", "r") as f:
+            list_objs = json.load(f)
+        self.assertEqual(r1.to_dictionary(), list_objs[0])
+        self.assertEqual(r2.to_dictionary(), list_objs[1])
+
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual(f.read(), "[]")
