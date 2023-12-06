@@ -144,3 +144,37 @@ class TestBase(unittest.TestCase):
         s2.update(**s1_dict)
         self.assertEqual(str(s2), "[Square] (1) 2/1 - 10")
         self.assertNotEqual(s1, s2)
+
+    def test_create(self):
+        """Test if the class method of Base works as intended"""
+        s1 = Square(3, 5, 1)
+        s1_dict = s1.to_dictionary()
+        s2 = Square.create(**s1_dict)
+
+        self.assertEqual(str(s1), "[Square] (1) 5/1 - 3")
+        self.assertEqual(str(s2), "[Square] (1) 5/1 - 3")
+
+        self.assertNotEqual(s1, s2)
+
+        s3 = Square.create(**{'size': 5})
+        self.assertEqual(str(s3), "[Square] (3) 0/0 - 5")
+
+        s4 = Square.create(**{'id': 4, 'size': 5})
+        self.assertEqual(str(s4), "[Square] (4) 0/0 - 5")
+
+        s5 = Square.create(**{'id': 89, 'size': 5, 'x': 2})
+        self.assertEqual(str(s5), "[Square] (89) 2/0 - 5")
+
+        s6 = Square.create(**{'id': 89, 'size': 5, 'x': 2, 'y': 4})
+        self.assertEqual(str(s6), "[Square] (89) 2/4 - 5")
+
+    def test_load_from_file(self):
+        """Test class method of the Base class"""
+        Square.save_to_file([])
+        s1 = Square.load_from_file()
+        self.assertEqual(s1, [])
+
+        s2 = Square(2, 4)
+        Square.save_to_file([s2])
+        list_output = Square.load_from_file()
+        self.assertEqual(str(list_output[0]), str(s2))

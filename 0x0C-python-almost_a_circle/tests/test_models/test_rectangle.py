@@ -176,3 +176,60 @@ class TestBase(unittest.TestCase):
         Rectangle.save_to_file([])
         with open("Rectangle.json", "r") as f:
             self.assertEqual(f.read(), "[]")
+
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual(f.read(), "[]")
+
+    def test_from_json_string(self):
+        """Tests the static method from_json_string of the Base class"""
+        list_input = [
+                {'id': 89, 'width': 10, 'height': 4},
+                {'id': 7, 'width': 1, 'height': 7}
+                ]
+        json_list_input = Rectangle.to_json_string(list_input)
+        list_output = Rectangle.from_json_string(json_list_input)
+
+        self.assertIsInstance(json_list_input, str)
+        self.assertIsInstance(list_output, list)
+        self.assertEqual(list_input, list_output)
+
+        json_string = ""
+        list_output = Rectangle.from_json_string(json_string)
+        self.assertEqual(list_output, [])
+
+        json_string = None
+        list_output = Rectangle.from_json_string(json_string)
+        self.assertEqual(list_output, [])
+
+    def test_create(self):
+        """Test if the class method of Base works as intended"""
+        r1 = Rectangle(3, 5, 1)
+        r1_dict = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dict)
+
+        self.assertEqual(str(r1), "[Rectangle] (1) 1/0 - 3/5")
+        self.assertEqual(str(r2), "[Rectangle] (1) 1/0 - 3/5")
+
+        self.assertNotEqual(r1, r2)
+
+        r3 = Rectangle.create(**{'id': 89, 'height': 3, 'width': 5})
+        self.assertEqual(str(r3), "[Rectangle] (89) 0/0 - 5/3")
+
+        r3 = Rectangle.create(**{'id': 89, 'height': 3, 'width': 5, 'x': 3})
+        self.assertEqual(str(r3), "[Rectangle] (89) 3/0 - 5/3")
+
+        r4 = Rectangle.create(**{'id': 9, 'height': 3, 'width': 5,
+                                 'x': 2, 'y': 3})
+        self.assertEqual(str(r4), "[Rectangle] (9) 2/3 - 5/3")
+
+    def test_load_from_file(self):
+        """Test class method of the Base class"""
+        Rectangle.save_to_file([])
+        r1 = Rectangle.load_from_file()
+        self.assertEqual(r1, [])
+
+        r1 = Rectangle(2, 4)
+        Rectangle.save_to_file([r1])
+        list_output = Rectangle.load_from_file()
+        self.assertEqual(str(list_output[0]), str(r1))
