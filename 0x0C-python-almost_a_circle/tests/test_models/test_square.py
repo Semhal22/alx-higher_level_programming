@@ -128,3 +128,19 @@ class TestBase(unittest.TestCase):
 
         s1.update(x=1, size=7, y=3, id=23)
         self.assertEqual(str(s1), "[Square] (23) 1/3 - 7")
+
+    def test_to_dictionary(self):
+        """Tests the method to_dictionary of the Square class"""
+        s1 = Square(10, 2, 1)
+        self.assertEqual(str(s1), "[Square] (1) 2/1 - 10")
+
+        s1_dict = s1.to_dictionary()
+        self.assertEqual(s1_dict, {'id': 1, 'x': 2, 'size': 10, 'y': 1})
+        self.assertIsInstance(s1_dict, dict)
+
+        s2 = Square(1, 1)
+        self.assertEqual(str(s2), "[Square] (2) 1/0 - 1")
+
+        s2.update(**s1_dict)
+        self.assertEqual(str(s2), "[Square] (1) 2/1 - 10")
+        self.assertNotEqual(s1, s2)

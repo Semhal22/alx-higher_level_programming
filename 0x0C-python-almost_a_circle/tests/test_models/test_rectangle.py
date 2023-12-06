@@ -4,6 +4,7 @@ import models
 from models.rectangle import Rectangle
 from models import rectangle
 from models.base import Base
+import json
 import unittest
 from unittest.mock import patch, call
 
@@ -148,3 +149,15 @@ class TestBase(unittest.TestCase):
         r2.update(**r1_dict)
         self.assertEqual(str(r2), "[Rectangle] (1) 1/9 - 10/2")
         self.assertNotEqual(r1, r2)
+
+    def test_to_json(self):
+        """Tests the method to_json_string of the Base class static method"""
+        r1 = Rectangle(10, 7, 2, 8)
+        dictionary = r1.to_dictionary()
+        json_dictionary = Base.to_json_string([dictionary])
+
+        self.assertEqual(dictionary, {'x': 2, 'width': 10, 'id': 1,
+                                      'height': 7, 'y': 8})
+        self.assertIsInstance(dictionary, dict)
+        self.assertEqual(dictionary, json.loads(json_dictionary)[0])
+        self.assertIsInstance(json_dictionary, str)
