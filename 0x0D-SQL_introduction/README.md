@@ -14,3 +14,5 @@
 1. List by best
 1. Select the best
 1. Cheating is bad
+1. Score too low
+1. Average
