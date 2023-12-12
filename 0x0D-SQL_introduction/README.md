@@ -17,3 +17,4 @@
 1. Score too low
 1. Average
 1. Number by score
+1. Say my name
