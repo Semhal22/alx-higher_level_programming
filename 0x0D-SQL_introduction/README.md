@@ -6,3 +6,6 @@
 1. Delete a database
 1. List tables
 1. First table
+1. Full Description
+1. List all in table
+1. First add
