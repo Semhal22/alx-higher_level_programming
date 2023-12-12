@@ -11,3 +11,6 @@
 1. First add
 1. Count 89
 1. Full creation
+1. List by best
+1. Select the best
+1. Cheating is bad
