@@ -3,3 +3,4 @@
 1. List databases
    - Lists all databases of your MySQL server
 1. Create a database
+1. Delete a database
