@@ -16,3 +16,4 @@
 1. Cheating is bad
 1. Score too low
 1. Average
+1. Number by score
