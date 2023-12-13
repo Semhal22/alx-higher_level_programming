@@ -7,3 +7,4 @@
 1. ID can't be null
 1. Unique ID
 1. States table
+1. Cities table
