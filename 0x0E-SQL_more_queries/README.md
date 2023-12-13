@@ -4,3 +4,6 @@
 1. Root user
 1. Read user
 1. Always a name
+1. ID can't be null
+1. Unique ID
+1. States table
