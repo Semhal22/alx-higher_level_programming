@@ -8,3 +8,6 @@
 1. Unique ID
 1. States table
 1. Cities table
+1. Cities of California
+1. Cities by States
+1. Genre ID by show
