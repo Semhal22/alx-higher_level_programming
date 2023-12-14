@@ -11,3 +11,9 @@
 1. Cities of California
 1. Cities by States
 1. Genre ID by show
+1. Genre ID for all shows
+1. No genre
+1. Number of shows by genre
+1. My genres
+1. Only comedy
+1. List shows and genres
