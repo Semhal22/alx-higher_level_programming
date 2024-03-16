@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Lists all the tuples of a table states
-  with a name starting with upper N
+  where name matches argument, safe from SQL injection
 """
 import MySQLdb
 import sys

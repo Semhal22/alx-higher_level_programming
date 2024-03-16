@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""Lists all the tuples of a table states
-  with a name starting with upper N
-"""
+"""Lists all cities by joining the two tables"""
 import MySQLdb
 import sys
 

@@ -4,3 +4,5 @@
 1. Filter states
 1. Filter states by user input
 1. SQL Injection
+1. Cities by states
+1. All cities by state
