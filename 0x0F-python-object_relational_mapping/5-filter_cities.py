@@ -15,12 +15,10 @@ if __name__ == "__main__":
                 cities.state_id=states.id WHERE BINARY states.name=%s\
                 ORDER BY cities.id", (state_name,))
     rows = cur.fetchall()
-    names = []
-    for row in rows:
-        names.append(str(row).replace('(\'', '').replace('\',)', ''))
-
-    for i in range(len(names) - 1):
-        print(names[i], end=", ")
-
-    if names:
-        print(names[-1])
+    length = len(rows)
+    for i in range(length):
+        """names.append(str(row).replace('(\'', '').replace('\',)', ''))"""
+        if i == length - 1:
+            print("".join(rows[i]))
+        else:
+            print("".join(rows[i]), end=", ")
