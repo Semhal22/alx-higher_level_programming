@@ -6,3 +6,7 @@
 1. SQL Injection
 1. Cities by states
 1. All cities by state
+1. First state model
+1. All states via SQLAlchemy
+1. First state
+1. Contains 'a'
