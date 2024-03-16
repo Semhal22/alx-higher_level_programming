@@ -13,8 +13,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    result = session.query(State).filter(State.id).first()
+    result = session.query(State).first()
     if not result:
-        print()
+        print("Nothing")
     else:
         print(f"{result.id}: {result.name}")
