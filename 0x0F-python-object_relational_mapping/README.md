@@ -10,3 +10,8 @@
 1. All states via SQLAlchemy
 1. First state
 1. Contains 'a'
+1. Get a state
+1. Add a new state
+1. Update a state
+1. Delete states
+1. Cities in state
