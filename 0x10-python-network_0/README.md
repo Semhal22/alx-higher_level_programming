@@ -19,3 +19,9 @@
 	* Sends a POST request to the given URL
 	* A variable email must be sent with the value test@gmail.com
 	* A variable subject must be sent with the value I will always be here for PLD
+6. Find a peak
+	* Function that finds a peak in a list of unsorted integers
+7. Only status code
+	* Displays only the status code of the response after sending a request to URL
+	* Don't use pipe or redirection
+
