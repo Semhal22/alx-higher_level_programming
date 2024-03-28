@@ -10,3 +10,5 @@
     * Display only body of a 200 Status code response
 2. cURL Method
 	* ends a DELETE request to the URL passed as the first argument and displays the body of the response
+3. cURL only methods
+	* Displays all HTTP methods the server will accept
