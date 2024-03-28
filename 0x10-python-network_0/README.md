@@ -24,4 +24,6 @@
 7. Only status code
 	* Displays only the status code of the response after sending a request to URL
 	* Don't use pipe or redirection
+8. cURL a JSON file
+	* Sends a JSON POST request to a URL passed as the first argument, and displays the body of the response.
 
