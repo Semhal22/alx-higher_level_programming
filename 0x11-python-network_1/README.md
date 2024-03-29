@@ -10,3 +10,5 @@
 3. Error code #0
 	* Sends a request to the URL and displays body of response
 	* Manage urllib.error.HTTPError exceptions and print Error code
+4. What's my status? #1
+	* Fetches https://alx-intranet.hbtn.io/status using requests
