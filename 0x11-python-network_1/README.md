@@ -7,3 +7,6 @@
 	* Displays the value of the X-Request-Id variable found in the header of the response after sending a request to a URL
 2. POST an email #0
 	* Sends a POST request to the passed URL with email as parameter
+3. Error code #0
+	* Sends a request to the URL and displays body of response
+	* Manage urllib.error.HTTPError exceptions and print Error code
