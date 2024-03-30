@@ -19,3 +19,5 @@
 7. Error code #1
 	* Sends a request to the URL and displays body of response
 	* Manage exceptions
+8. Search API
+	* Send a POST request with a parameter
