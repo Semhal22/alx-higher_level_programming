@@ -12,3 +12,5 @@
 	* Manage urllib.error.HTTPError exceptions and print Error code
 4. What's my status? #1
 	* Fetches https://alx-intranet.hbtn.io/status using requests
+5. Response header value #1
+	* Displays the value of the X-Request-Id variable found in the header of the response after sending a request to a URL

@@ -9,6 +9,6 @@ if __name__ == "__main__":
         res = response.read()
 
     print("Body response:")
-    print(f"    - type: {type(res)}")
-    print(f"    - content: {res}")
-    print(f"    - utf8 content: {res.decode()}")
+    print(f"	- type: {type(res)}")
+    print(f"	- content: {res}")
+    print(f"	- utf8 content: {res.decode()}")
