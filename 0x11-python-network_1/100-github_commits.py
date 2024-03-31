@@ -11,8 +11,9 @@ if __name__ == "__main__":
     res = requests.get(url, headers=headers)
     if (res.status_code == 200):
         res = res.json()
-        for i in range(10):
+        i = 0
+        while (i < 10 and i < len(res)):
             obj = res[i]
             author = obj.get('commit').get('author').get('name')
-            tx = f"{obj.get('sha')}: {author}"
-            print(tx)
+            print(f"{obj.get('sha')}: {author}")
+            i += 1
