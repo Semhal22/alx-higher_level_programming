@@ -5,3 +5,5 @@
     - Write a string to a file
 2. Status code
     - Display status code of a GET request
+3. Star wars movie title
+    - Print the title of a Star Wars movie where episode number matches a given integer
