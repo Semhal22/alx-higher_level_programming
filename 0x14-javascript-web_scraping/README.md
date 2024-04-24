@@ -3,3 +3,5 @@
     - Reads and prints the content of a file
 1. Write me
     - Write a string to a file
+2. Status code
+    - Display status code of a GET request
