@@ -7,3 +7,5 @@
     - Display status code of a GET request
 3. Star wars movie title
     - Print the title of a Star Wars movie where episode number matches a given integer
+4. Star wars Wedge Antilles
+    - Prints the number of movies where some character is present
