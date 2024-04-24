@@ -9,3 +9,7 @@
     - Print the title of a Star Wars movie where episode number matches a given integer
 4. Star wars Wedge Antilles
     - Prints the number of movies where some character is present
+5. Loripsum
+    - gets the contents of a webpage and stores it in a file
+6. How many completed?
+    - computes the number of tasks completed by user id.
